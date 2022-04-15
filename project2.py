@@ -87,13 +87,3 @@ if __name__=='__main__':
 
     json_output=similar_cuisines(d_f, frequency, cuisine, score, args.N)
 
-
-
-
-
-
-
-
-
-
-
