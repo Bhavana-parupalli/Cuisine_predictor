@@ -46,4 +46,15 @@ The test_ingredients_corpus function passes the yummly.json file to the read_jso
 ### test_tfidf_vector()
 The test_tfidf_vector function passes the yummly.json file to read_json() in project2.py and gets the dataframe, the dataframe along with input_ingredients are passed to ingredients_corpus() in project2.py and get the ingredients_corpus. The ingredients_corpus is then passed to tfidf_vector() in project2.py and gets the output. The tfidf_vector() returns the matrix output. Therefore, if the output is of type scipy.sparse.csr_matrix then test case will pass else fail. 
 ### test_cuisine_predictor()
-The test_cuisine_predictor function passes the yummly.json file to read_json which is present inside project2.py and gets the dataframe, the dataframe along with input_ingredients are passed to ingredients_corpus() in project2.py and gets the ingredients_corpus. Followed by, the ingredients_corpus is passed to tfidf_vector() in project2.py and gets the matrix. The matrix and dataframe are finally passed into cuisine_predictor in poject2.py and gets the output. The cuisine_predictor() returns the cuisine which is present inside an array along with score which is of type float. If the returned cuisine is of type array and score is of type float, then the test case will pass else fail. 
+The test_cuisine_predictor function passes the yummly.json file to read_json which is present inside project2.py and gets the dataframe, the dataframe along with input_ingredients are passed to ingredients_corpus() in project2.py and gets the ingredients_corpus. Followed by, the ingredients_corpus is passed to tfidf_vector() in project2.py and gets the matrix. The matrix and dataframe are finally passed into cuisine_predictor in poject2.py and gets the cuisine type and it's score. The cuisine_predictor() returns the cuisine which is present inside an array along with score which is of type float. If the returned cuisine is of type array and score is of type float, then the test case will pass else fail. 
+### test_similar_cuisines()
+The test_similar_cuisines function passes the yummly.json file to read_json which is present inside project2.py and gets the dataframe, the dataframe along with input_ingredients are passed to ingredients_corpus() in project2.py and gets the ingredients_corpus, then the ingredients_corpus is passed to tfidf_vector() in project2.py and gets the matrix. The matrix and dataframe are then passed into a cuisine_predictor in project2.py and gets the cuisine type along with the score. The dataframe, matrix, cuisine type, score and 'n' are passed to similar_cuisines() in project2.py and gets the json output. If the returned output is of type str then test case will pass else fail.
+### Test cases execution
+After connecting to the instance using SSH.
+
+Clone the repository: https://github.com/Bhavana-parupalli/cs5293sp22-project2
+
+Give the following command in command line.
+```bash
+pipenv run python -m pytest
+```
