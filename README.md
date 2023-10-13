@@ -1,4 +1,3 @@
-# cs5293sp22-project2
 ## Author: Bhavana Parupalli
 ## Packages installed
 ```bash 
